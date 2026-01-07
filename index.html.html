@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ornela Borrello | Strategic Marketing Leader</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #000000;
+            --accent-red: #FF6B6B;
+            --accent-yellow: #FFD93D;
+            --accent-pink: #FF9EBB;
+            --bg: #FFFFFF;
+            --bg-alt: #FAFAFA;
+            --text: #2D2D2D;
+            --text-light: #666666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: 'Archivo Black', sans-serif;
+            font-weight: 900;
+            line-height: 1;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 8vw, 7rem);
+            color: var(--primary);
+        }
+
+        h2 {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            color: var(--primary);
+        }
+
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            color: var(--primary);
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: clamp(4rem, 10vw, 8rem) 0;
+            position: relative;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--bg);
+            z-index: 1000;
+            padding: 1.5rem 0;
+            border-bottom: 3px solid var(--primary);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent-red);
+        }
+
+        /* Hero */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 6rem;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-eyebrow {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--accent-red);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 1rem;
+        }
+
+        .hero-title {
+            margin-bottom: 2rem;
+            line-height: 0.9;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+            color: var(--text);
+            max-width: 800px;
+            margin-bottom: 3rem;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin-bottom: 3rem;
+        }
+
+        .stat {
+            border-left: 4px solid var(--accent-red);
+            padding-left: 1.5rem;
+        }
+
+        .stat-number {
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 3rem;
+            color: var(--accent-red);
+            display: block;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1.2rem 2.5rem;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: 3px solid var(--primary);
+        }
+
+        .btn-primary {
+            background: var(--accent-red);
+            color: white;
+            border-color: var(--accent-red);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            transform: translate(-4px, -4px);
+            box-shadow: 4px 4px 0 var(--accent-yellow);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+            transform: translate(-4px, -4px);
+            box-shadow: 4px 4px 0 var(--accent-pink);
+        }
+
+        /* Specializations */
+        .specializations {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .spec-item {
+            padding: 2rem;
+            background: white;
+            border: 3px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .spec-item:nth-child(1) { border-color: var(--accent-red); }
+        .spec-item:nth-child(2) { border-color: var(--accent-yellow); }
+        .spec-item:nth-child(3) { border-color: var(--accent-pink); }
+        .spec-item:nth-child(4) { border-color: var(--accent-red); }
+        .spec-item:nth-child(5) { border-color: var(--accent-yellow); }
+        .spec-item:nth-child(6) { border-color: var(--accent-pink); }
+
+        .spec-item:hover {
+            transform: translate(-4px, -4px);
+        }
+
+        .spec-item:hover:nth-child(1) { box-shadow: 4px 4px 0 var(--accent-red); }
+        .spec-item:hover:nth-child(2) { box-shadow: 4px 4px 0 var(--accent-yellow); }
+        .spec-item:hover:nth-child(3) { box-shadow: 4px 4px 0 var(--accent-pink); }
+        .spec-item:hover:nth-child(4) { box-shadow: 4px 4px 0 var(--accent-red); }
+        .spec-item:hover:nth-child(5) { box-shadow: 4px 4px 0 var(--accent-yellow); }
+        .spec-item:hover:nth-child(6) { box-shadow: 4px 4px 0 var(--accent-pink); }
+
+        .spec-item h4 {
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .spec-item p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Featured Work */
+        .section-header {
+            margin-bottom: 4rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+
+        /* Case Cards - Collapsible */
+        .case-grid {
+            display: grid;
+            gap: 3rem;
+        }
+
+        .case-card {
+            border: 3px solid var(--primary);
+            background: white;
+            transition: all 0.3s ease;
+        }
+
+        .case-card.expanded {
+            box-shadow: -8px 8px 0 rgba(0,0,0,0.1);
+        }
+
+        /* Unique styling for each case */
+        .case-card:nth-child(1) { border-color: var(--accent-red); }
+        .case-card:nth-child(2) { 
+            border-color: var(--accent-yellow);
+            background: #FFFEF5;
+        }
+        .case-card:nth-child(3) { border-color: var(--accent-pink); }
+        .case-card:nth-child(4) { 
+            border-color: var(--accent-red);
+            background: #FFF8F8;
+        }
+        .case-card:nth-child(5) { border-color: var(--accent-yellow); }
+
+        .case-header {
+            padding: 3rem;
+            cursor: pointer;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 3rem;
+            align-items: start;
+            transition: background 0.3s ease;
+        }
+
+        .case-header:hover {
+            background: rgba(0,0,0,0.02);
+        }
+
+        .case-number {
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 4rem;
+            line-height: 1;
+            opacity: 0.15;
+        }
+
+        .case-card:nth-child(1) .case-number { color: var(--accent-red); }
+        .case-card:nth-child(2) .case-number { color: var(--accent-yellow); }
+        .case-card:nth-child(3) .case-number { color: var(--accent-pink); }
+        .case-card:nth-child(4) .case-number { color: var(--accent-red); }
+        .case-card:nth-child(5) .case-number { color: var(--accent-yellow); }
+
+        .case-header-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .case-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 700;
+            display: inline-block;
+        }
+
+        .case-card:nth-child(1) .case-label { 
+            color: white;
+            background: var(--accent-red);
+            padding: 0.4rem 0.8rem;
+        }
+        .case-card:nth-child(2) .case-label { 
+            color: var(--primary);
+            background: var(--accent-yellow);
+            padding: 0.4rem 0.8rem;
+        }
+        .case-card:nth-child(3) .case-label { 
+            color: white;
+            background: var(--accent-pink);
+            padding: 0.4rem 0.8rem;
+        }
+        .case-card:nth-child(4) .case-label { 
+            color: white;
+            background: var(--accent-red);
+            padding: 0.4rem 0.8rem;
+        }
+        .case-card:nth-child(5) .case-label { 
+            color: var(--primary);
+            background: var(--accent-yellow);
+            padding: 0.4rem 0.8rem;
+        }
+
+        .case-title {
+            font-size: 2.5rem;
+            margin: 0.5rem 0;
+        }
+
+        .case-role {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        .case-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        .tag {
+            padding: 0.5rem 1rem;
+            background: var(--bg-alt);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border: 2px solid var(--primary);
+        }
+
+        .case-expand-icon {
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 2.5rem;
+            line-height: 1;
+            transition: transform 0.3s ease;
+        }
+
+        .case-card.expanded .case-expand-icon {
+            transform: rotate(45deg);
+        }
+
+        /* Case Content - Hidden by default */
+        .case-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+
+        .case-card.expanded .case-content {
+            max-height: 5000px;
+        }
+
+        .case-content-inner {
+            padding: 0 3rem 3rem 3rem;
+            border-top: 2px solid rgba(0,0,0,0.1);
+        }
+
+        .case-content h4 {
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            margin: 2.5rem 0 1rem 0;
+        }
+
+        .case-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .case-content ul {
+            margin: 1.5rem 0 1.5rem 2rem;
+        }
+
+        .case-content li {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+
+        /* Clients */
+        #clients {
+            background: var(--bg-alt);
+        }
+
+        .client-section {
+            margin-bottom: 4rem;
+        }
+
+        .client-section h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .client-section:nth-child(2) h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--accent-red);
+        }
+
+        .client-section:nth-child(3) h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--accent-yellow);
+        }
+
+        .client-section:nth-child(4) h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--accent-pink);
+        }
+
+        .client-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .client-card {
+            padding: 2rem;
+            background: white;
+            border: 3px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .client-card:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 4px 4px 0 var(--primary);
+        }
+
+        .client-name {
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .client-desc {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Teaching */
+        .teaching-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .teaching-card {
+            padding: 3rem;
+            background: var(--accent-red);
+            color: white;
+            border: 3px solid var(--primary);
+        }
+
+        .teaching-card:nth-child(2) {
+            background: var(--accent-yellow);
+            color: var(--primary);
+        }
+
+        .teaching-card h3 {
+            color: white;
+            margin-bottom: 0.8rem;
+            font-size: 1.8rem;
+        }
+
+        .teaching-card:nth-child(2) h3 {
+            color: var(--primary);
+        }
+
+        .teaching-institution {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .teaching-dates {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .teaching-card ul {
+            margin-left: 1.5rem;
+        }
+
+        .teaching-card li {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .recognition-box {
+            margin-top: 4rem;
+            padding: 3rem;
+            background: var(--accent-pink);
+            border: 3px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .recognition-box h3 {
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .recognition-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .recognition-item h4 {
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .recognition-item p {
+            line-height: 1.6;
+        }
+
+        /* Contact */
+        #contact {
+            background: var(--primary);
+            color: white;
+        }
+
+        #contact h2 {
+            color: var(--accent-yellow);
+        }
+
+        #contact .section-subtitle {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            margin-top: 4rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--accent-red);
+        }
+
+        .contact-item a {
+            color: var(--accent-pink);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent-yellow);
+        }
+
+        .contact-item span {
+            color: white;
+            font-size: 1.1rem;
+        }
+
+        .services-list {
+            list-style: none;
+        }
+
+        .services-list li {
+            padding: 1.2rem 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .services-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            nav ul {
+                display: none;
+            }
+
+            .case-header {
+                grid-template-columns: 1fr auto;
+                gap: 1.5rem;
+            }
+
+            .case-number {
+                display: none;
+            }
+
+            .contact-grid,
+            .teaching-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                text-align: center;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#hero" class="logo">OB</a>
+            <ul>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#clients">Clients</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-eyebrow">Strategic Marketing Leader</div>
+                <h1 class="hero-title">ORNELA<br>BORRELLO</h1>
+                <p class="hero-subtitle">15+ years driving brand strategy, go-to-market planning, and marketing transformation for B2B technology companies, SaaS platforms, and impact organizations.</p>
+                
+                <div class="stats-grid">
+                    <div class="stat">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Years</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">Awards</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">2018</span>
+                        <span class="stat-label">AI Since</span>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="#work" class="btn btn-primary">View Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+
+                <div class="specializations">
+                    <div class="spec-item">
+                        <h4>Brand Strategy</h4>
+                        <p>Architecture, positioning, messaging frameworks</p>
+                    </div>
+                    <div class="spec-item">
+                        <h4>Go-to-Market</h4>
+                        <p>Launch planning, market entry, channel strategy</p>
+                    </div>
+                    <div class="spec-item">
+                        <h4>AI-Powered Ops</h4>
+                        <p>Marketing automation, workflow optimization</p>
+                    </div>
+                    <div class="spec-item">
+                        <h4>B2B SaaS</h4>
+                        <p>Product marketing, technical content</p>
+                    </div>
+                    <div class="spec-item">
+                        <h4>Fractional CMO</h4>
+                        <p>Strategic leadership, team building</p>
+                    </div>
+                    <div class="spec-item">
+                        <h4>Social Impact</h4>
+                        <p>Award-winning campaigns</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Work -->
+    <section id="work">
+        <div class="container">
+            <div class="section-header">
+                <h2>FEATURED WORK</h2>
+                <p class="section-subtitle">Click each project to explore the full story.</p>
+            </div>
+            
+            <div class="case-grid">
+                <!-- Case 1: Sequence -->
+                <div class="case-card" data-case="1">
+                    <div class="case-header" onclick="toggleCase(1)">
+                        <div class="case-number">01</div>
+                        <div class="case-header-content">
+                            <span class="case-label">B2B SAAS · 2024-2025</span>
+                            <h3 class="case-title">SEQUENCE</h3>
+                            <p class="case-role">Head of Marketing</p>
+                            <div class="case-tags">
+                                <span class="tag">AI Platform</span>
+                                <span class="tag">Pre-Launch</span>
+                                <span class="tag">Zero to One</span>
+                            </div>
+                        </div>
+                        <div class="case-expand-icon">+</div>
+                    </div>
+                    <div class="case-content">
+                        <div class="case-content-inner">
+                            <p><strong>AI-powered video communication platform for global teams.</strong> First marketing hire at pre-launch startup, building complete marketing function from zero with minimal budget.</p>
+                            
+                            <h4>The Challenge</h4>
+                            <p>Build marketing operations from scratch with limited resources. Maintain brand consistency while product evolved rapidly. Enable small team to produce enterprise-level output.</p>
+                            
+                            <h4>My Approach</h4>
+                            <ul>
+                                <li>Built complete brand architecture: value proposition, buyer personas, visual identity</li>
+                                <li>Implemented AI-powered marketing automation stack (Claude, ChatGPT, Perplexity, Midjourney)</li>
+                                <li>Created technical marketing assets: in-app messaging, API documentation, developer content</li>
+                                <li>Established data infrastructure: dashboards, attribution frameworks, KPIs</li>
+                            </ul>
+                            
+                            <h4>Results</h4>
+                            <ul>
+                                <li>✓ Complete marketing function built from ground zero</li>
+                                <li>✓ High output through automation (content, email, onboarding, lead gen)</li>
+                                <li>✓ Launch-ready infrastructure with minimal costs</li>
+                                <li>✓ Brand consistency maintained despite product evolution</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 2: FENA -->
+                <div class="case-card" data-case="2">
+                    <div class="case-header" onclick="toggleCase(2)">
+                        <div class="case-number">02</div>
+                        <div class="case-header-content">
+                            <span class="case-label">SOCIAL IMPACT · 2019-2021</span>
+                            <h3 class="case-title">FENA</h3>
+                            <p class="case-role">Communication & ICT Coordinator</p>
+                            <div class="case-tags">
+                                <span class="tag">🏆 Grand Prix</span>
+                                <span class="tag">Gov Tech</span>
+                                <span class="tag">Crisis Response</span>
+                            </div>
+                        </div>
+                        <div class="case-expand-icon">+</div>
+                    </div>
+                    <div class="case-content">
+                        <div class="case-content-inner">
+                            <p><strong>Gender violence prevention organization.</strong> Led communications and digital transformation during COVID-19 pandemic when domestic violence spiked and support networks collapsed.</p>
+                            
+                            <h4>Project 1: "Hits que Duelen" Campaign 🏆</h4>
+                            <p>Award-winning campaign co-created with Isobar. Popular song lyrics with misogynistic content presented as fake news headlines, making invisible cultural violence visible.</p>
+                            <p><strong>Awards:</strong></p>
+                            <ul>
+                                <li>🏆 Grand Prix - Echo Latam</li>
+                                <li>🥇 2x Gold - Echo Latam (Best Creative + Best Social Good)</li>
+                                <li>🥈 Silver - Premio Obrar (Argentine Advertising Council)</li>
+                                <li>🥈 Silver - +Digital Awards (Gender Equality)</li>
+                            </ul>
+
+                            <h4>Project 2: Digital Inclusion Program</h4>
+                            <p>Weekly virtual workshops teaching digital skills to at-risk women during lockdown. Secured IberCultura Viva international grant.</p>
+
+                            <h4>Project 3: Gender Violence Prevention Chatbot</h4>
+                            <p>Built anonymous, traceless chatbot providing crisis information, legal rights, and support resources during lockdown.</p>
+                            <ul>
+                                <li>✓ Government adoption: Municipality in Córdoba implemented chatbot</li>
+                                <li>✓ Beta tested with 100 users</li>
+                                <li>✓ Life-saving tool with anonymous access</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 3: ChatTonic -->
+                <div class="case-card" data-case="3">
+                    <div class="case-header" onclick="toggleCase(3)">
+                        <div class="case-number">03</div>
+                        <div class="case-header-content">
+                            <span class="case-label">B2B TECH · 2018-PRESENT</span>
+                            <h3 class="case-title">CHATTONIC</h3>
+                            <p class="case-role">Strategic Consultant & Product UX</p>
+                            <div class="case-tags">
+                                <span class="tag">AI Pioneer 2018</span>
+                                <span class="tag">Enterprise</span>
+                                <span class="tag">BID Featured</span>
+                            </div>
+                        </div>
+                        <div class="case-expand-icon">+</div>
+                    </div>
+                    <div class="case-content">
+                        <div class="case-content-inner">
+                            <p><strong>Conversational AI platform for enterprise chatbots.</strong> Early days of conversational AI (2018 - pre-ChatGPT era). Enterprise clients: Western Union, Prisma, Clarín, government entities.</p>
+                            
+                            <h4>Phase 1 - Brand & Operations</h4>
+                            <ul>
+                                <li>Complete rebrand: naming, visual identity, website</li>
+                                <li>HubSpot implementation (sales + marketing modules)</li>
+                                <li>Case study development across industries</li>
+                            </ul>
+
+                            <h4>Phase 2 - Product & UX</h4>
+                            <ul>
+                                <li>Deep-dive into conversational AI and LLM architecture</li>
+                                <li>Designed conversational UX for complex enterprise chatbots</li>
+                                <li>Client-facing "UX expert" in enterprise pitches</li>
+                            </ul>
+
+                            <h4>Phase 3 - Social Impact</h4>
+                            <ul>
+                                <li>COVID Information Bot: Free public health tool</li>
+                                <li>FENA Gender Violence Bot: Anonymous crisis access</li>
+                            </ul>
+                            
+                            <h4>Results</h4>
+                            <ul>
+                                <li>✓ Mastered LLM/conversational AI in 2018 (5 years before mainstream)</li>
+                                <li>✓ Secured major enterprise clients (Western Union, Prisma, Clarín)</li>
+                                <li>✓ Featured in BID podcast on AI/LLM</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 4: Tecsol -->
+                <div class="case-card" data-case="4">
+                    <div class="case-header" onclick="toggleCase(4)">
+                        <div class="case-number">04</div>
+                        <div class="case-header-content">
+                            <span class="case-label">B2B TECH · 2017-2023</span>
+                            <h3 class="case-title">TECSOL</h3>
+                            <p class="case-role">Fractional CMO & Strategic Advisor</p>
+                            <div class="case-tags">
+                                <span class="tag">6-Year Partnership</span>
+                                <span class="tag">Team Building</span>
+                            </div>
+                        </div>
+                        <div class="case-expand-icon">+</div>
+                    </div>
+                    <div class="case-content">
+                        <div class="case-content-inner">
+                            <p><strong>B2B tech consultancy: Database Management, Oracle, IT Talent Solutions.</strong> Transform "Gastón's consultancy" (founder's personal brand) into recognized corporate brand "Tecsol."</p>
+                            
+                            <h4>6-Year Evolution</h4>
+                            
+                            <p><strong>Phase 1 (2017) - Brand Foundation:</strong> Strategic coaching with founder, brand refresh, website development.</p>
+
+                            <p><strong>Phase 2 (2018-2020) - Fractional CMO:</strong> Developed strategic marketing plan, mentored junior marketing manager, strategic meetings with founder + department heads.</p>
+
+                            <p><strong>Phase 3 (2020-2021) - Talent Architect:</strong> Recruited marketing managers when team members departed. Built marketing function with increasing expertise.</p>
+
+                            <p><strong>Phase 4 (2021-2023) - Strategic Advisor:</strong> Marketing area consolidated and mature. Team operating independently.</p>
+                            
+                            <h4>Results</h4>
+                            <ul>
+                                <li>✓ <strong>"Tecsol beat Gastón"</strong> - Brand recognition surpassed founder's personal brand</li>
+                                <li>✓ 6-year trusted advisor relationship</li>
+                                <li>✓ Built sustainable marketing function from zero</li>
+                                <li>✓ Marketing team operating autonomously by engagement end</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 5: FoodInn -->
+                <div class="case-card" data-case="5">
+                    <div class="case-header" onclick="toggleCase(5)">
+                        <div class="case-number">05</div>
+                        <div class="case-header-content">
+                            <span class="case-label">FOOD TECH · 2022</span>
+                            <h3 class="case-title">FOODINN</h3>
+                            <p class="case-role">Brand Strategist</p>
+                            <div class="case-tags">
+                                <span class="tag">Startup</span>
+                                <span class="tag">Complete Rebrand</span>
+                            </div>
+                        </div>
+                        <div class="case-expand-icon">+</div>
+                    </div>
+                    <div class="case-content">
+                        <div class="case-content-inner">
+                            <p><strong>Fifth-generation food production: frozen, ready-to-eat meals.</strong> 3 co-founders under 30 received government technology innovation grant. Advanced culinary technology, high nutritional quality.</p>
+                            
+                            <h4>The Challenge</h4>
+                            <p>Small B2C internet-only operation needing to scale beyond digital model. No defined brand strategy or positioning.</p>
+                            
+                            <h4>My Scope</h4>
+                            <ul>
+                                <li>Complete brand development (naming, visual identity, brand architecture)</li>
+                                <li>Marketing strategic framework</li>
+                                <li>Go-to-market strategy: B2C → multi-channel</li>
+                            </ul>
+                            
+                            <h4>Results</h4>
+                            <ul>
+                                <li>✓ <strong>Business model transformation:</strong> B2C online-only → Multi-channel B2C + B2B</li>
+                                <li>✓ B2B expansion: Now in retail points of sale (specialty stores, gyms)</li>
+                                <li>✓ First physical presence: Healthy café inside gym location</li>
+                                <li>✓ Events channel: Sports events partnerships</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Work -->
+    <section id="clients">
+        <div class="container">
+            <div class="section-header">
+                <h2>CLIENT WORK</h2>
+                <p class="section-subtitle">Selected strategic marketing projects with Proteína (2016-2024).</p>
+            </div>
+            
+            <div class="client-section">
+                <h3>TECH & DIGITAL</h3>
+                <div class="client-grid">
+                    <div class="client-card">
+                        <div class="client-name">Widergy</div>
+                        <p class="client-desc">Brand strategy, positioning, visual relaunch. Innovation framework development.</p>
+                    </div>
+                    <div class="client-card">
+                        <div class="client-name">Janis Commerce</div>
+                        <p class="client-desc">Latin America market entry strategy, repositioning, USP development.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="client-section">
+                <h3>CONSUMER BRANDS & RETAIL</h3>
+                <div class="client-grid">
+                    <div class="client-card">
+                        <div class="client-name">Burger King</div>
+                        <p class="client-desc">Strategic planning support for Argentina and Chile markets.</p>
+                    </div>
+                    <div class="client-card">
+                        <div class="client-name">Viamo</div>
+                        <p class="client-desc">Footwear brand. Complete brand redesign: strategic repositioning and visual identity refresh.</p>
+                    </div>
+                    <div class="client-card">
+                        <div class="client-name">Karinat</div>
+                        <p class="client-desc">Food brand. Brazil market entry: strategic brand repositioning, communication redesign.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="client-section">
+                <h3>INDUSTRIAL & B2B</h3>
+                <div class="client-grid">
+                    <div class="client-card">
+                        <div class="client-name">Trytech</div>
+                        <p class="client-desc">Industrial products. Brand development, product offering design, brand architecture.</p>
+                    </div>
+                    <div class="client-card">
+                        <div class="client-name">Euro Packaging</div>
+                        <p class="client-desc">Packaging solutions. Commercial strategy development. New brand identity.</p>
+                    </div>
+                    <div class="client-card">
+                        <div class="client-name">Tecnovax</div>
+                        <p class="client-desc">Biopharmaceutical company. Brand design and brand architecture strategy.</p>
+                    </div>
+                    <div class="client-card">
+                        <div class="client-name">Mel</div>
+                        <p class="client-desc">Real estate. Brand architecture and positioning design within business group. Brand refresh.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teaching -->
+    <section id="teaching">
+        <div class="container">
+            <div class="section-header">
+                <h2>TEACHING &<br>THOUGHT LEADERSHIP</h2>
+            </div>
+            
+            <div class="teaching-grid">
+                <div class="teaching-card">
+                    <h3>MARKETING PROFESSOR</h3>
+                    <p class="teaching-institution">Universidad Torcuato Di Tella</p>
+                    <p class="teaching-dates">May 2022 - April 2024</p>
+                    <ul>
+                        <li>Taught Branding and Planning modules in "Strategic Marketing Management Program"</li>
+                        <li>Program received 2023 excellence award</li>
+                    </ul>
+                </div>
+
+                <div class="teaching-card">
+                    <h3>ACADEMIC COORDINATOR</h3>
+                    <p class="teaching-institution">ISEC</p>
+                    <p class="teaching-dates">February 2021 - January 2023</p>
+                    <ul>
+                        <li>Academic Coordinator: Communication and Digital Marketing Diploma</li>
+                        <li>Professor: Professional Practice - Digital Marketing II</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="recognition-box">
+                <h3>RECOGNITION & EXPERTISE</h3>
+                <div class="recognition-grid">
+                    <div class="recognition-item">
+                        <h4>BID Podcast Feature</h4>
+                        <p>Inter-American Development Bank - Featured expert on AI, LLM, and conversational technology</p>
+                    </div>
+                    <div class="recognition-item">
+                        <h4>Industry Awards</h4>
+                        <p>6 International Marketing & Creative Awards • IberCultura Viva Grant Recipient • Early AI/LLM Adoption Pioneer (2018)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>LET'S WORK<br>TOGETHER</h2>
+                <p class="section-subtitle">I partner with B2B tech companies, SaaS platforms, and impact organizations.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <a href="mailto:orneborrello@gmail.com">orneborrello@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">💼</span>
+                        <a href="https://linkedin.com/in/ornelaborrello/" target="_blank">linkedin.com/in/ornelaborrello</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <span>Buenos Aires, Argentina (Remote/Hybrid)</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 style="color: var(--accent-yellow); margin-bottom: 2rem; font-size: 2rem;">SERVICES</h3>
+                    <ul class="services-list">
+                        <li>Fractional CMO / Marketing Leadership</li>
+                        <li>Brand Strategy & Architecture</li>
+                        <li>Go-to-Market Planning</li>
+                        <li>AI-Powered Marketing Operations</li>
+                        <li>Team Building & Mentorship</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Toggle case study expansion
+        function toggleCase(caseNum) {
+            const caseCard = document.querySelector(`.case-card[data-case="${caseNum}"]`);
+            caseCard.classList.toggle('expanded');
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80;
+                    const targetPosition = target.offsetTop - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
